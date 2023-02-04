@@ -1,6 +1,7 @@
 # Chat-Up---JetPack-Compose : In Progress
 
 A Chat Application having ability to send and receive text & multimedia messages in realtime.
+<br>
 Following MVVM ( Model View View-Model ) Architecture along with latest version of Jetpack Compose
 
 A sample preview of the application is as follows:
