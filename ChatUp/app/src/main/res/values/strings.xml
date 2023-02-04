@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Chat Up</string>
+    <string name="title_activity_otp">ActivityOtp</string>
+    <string name="title_activity_home">HomeActivity</string>
+</resources>
