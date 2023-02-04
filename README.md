@@ -1,4 +1,7 @@
-# Chat-Up---JetPack-Compose : In Progress
+# Chat-Up---JetPack-Compose
+
+
+<strong> (In Progress) </strong>
 
 A Chat Application having ability to send and receive text & multimedia messages in realtime.
 <br>
