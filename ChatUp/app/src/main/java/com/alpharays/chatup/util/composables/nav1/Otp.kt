@@ -63,11 +63,11 @@ fun OtpComp(navController: NavController, number: String?, verificationId: Strin
             Text(
                 text = "Otp Verification",
                 fontSize = 30.sp,
-                modifier = Modifier.padding(0.dp, 0.dp, 0.dp, 50.dp)
+                modifier = Modifier.padding(0.dp, 0.dp, 0.dp, 40.dp)
             )
             val modifier = Modifier
                 .size(330.dp)
-                .padding(0.dp, 0.dp, 0.dp, 30.dp)
+                .padding(0.dp, 0.dp, 0.dp, 25.dp)
             Image(
                 painterResource(id = R.drawable.otp_image),
                 contentDescription = "Otp Image",
@@ -78,8 +78,7 @@ fun OtpComp(navController: NavController, number: String?, verificationId: Strin
                 elevation = 4.dp,
                 modifier = Modifier
                     .fillMaxWidth(0.8f)
-                    .fillMaxHeight(0.5f)
-                    .padding(0.dp, 0.dp, 0.dp, 20.dp)
+                    .padding(0.dp, 0.dp, 0.dp, 15.dp)
             ) {
                 Column(
                     modifier = Modifier
@@ -92,7 +91,7 @@ fun OtpComp(navController: NavController, number: String?, verificationId: Strin
                 ) {
                     Text(
                         text = "Enter Otp sent to $number",
-                        fontSize = 18.sp,
+                        fontSize = 16.sp,
                         modifier = Modifier.padding(10.dp, 0.dp, 0.dp, 5.dp)
                     )
                     OutlinedTextField(

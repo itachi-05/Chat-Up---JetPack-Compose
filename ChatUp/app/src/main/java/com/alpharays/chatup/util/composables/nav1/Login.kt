@@ -57,20 +57,22 @@ fun LoginComp(navController: NavController) {
                 textAlign = TextAlign.Center,
                 modifier = Modifier.padding(0.dp, 0.dp, 0.dp, 15.dp)
             )
-            val modifier = Modifier
-                .size(320.dp)
-                .padding(0.dp, 0.dp, 0.dp, 10.dp)
+            val modifier = Modifier.size(320.dp)
             Image(
                 painterResource(id = R.drawable.login_image),
                 contentDescription = "Login Image",
                 modifier = modifier
             )
+            if (showProgressBar) {
+                CircularProgressIndicator(
+                    modifier = Modifier.padding(5.dp)
+                )
+            }
             Card(
                 shape = RoundedCornerShape(10.dp),
                 elevation = 4.dp,
                 modifier = Modifier
                     .fillMaxWidth(0.8f)
-                    .fillMaxHeight(0.5f)
                     .padding(0.dp, 0.dp, 0.dp, 10.dp)
             ) {
                 Column(
@@ -85,6 +87,7 @@ fun LoginComp(navController: NavController) {
                 ) {
 //                     Enter phone no. to register or login
                     OutlinedTextField(
+                        modifier = Modifier.padding(10.dp,5.dp,10.dp,5.dp),
                         value = phoneNumberFieldState,
                         label = {
                             Text("Enter your Phone number")
@@ -120,7 +123,7 @@ fun LoginComp(navController: NavController) {
                                     buttonEnabled = false
                                     showProgressBar = true
                                     str = "+91$phoneNumberFieldState"
-//                                    navController.navigate(Screen.OtpScreen.withArgs(str))
+//                                    navController.navigate(ScreenA.OtpScreenA.withArgs("1",str,"0"))
                                     loginViewModel.sendOtp(navController, context, str)
 //                                    showProgressBar = false
                                 }
@@ -132,9 +135,6 @@ fun LoginComp(navController: NavController) {
                         shape = RoundedCornerShape(10.dp)
                     ) {
                         Text(text = "Submit", color = Color(0xFF000000), fontSize = 16.sp)
-                    }
-                    if (showProgressBar) {
-                        CircularProgressIndicator()
                     }
                 }
             }

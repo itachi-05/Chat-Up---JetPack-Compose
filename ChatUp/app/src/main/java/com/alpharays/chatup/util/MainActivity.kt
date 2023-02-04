@@ -32,20 +32,17 @@ class MainActivity : ComponentActivity() {
                 Log.i("Not_Logged_In",auth.currentUser?.phoneNumber.toString())
                 NavigationA()
             }
-//            Surface(modifier = Modifier.fillMaxSize(0.9f)) {
-//                Box(
-//                    contentAlignment = Alignment.Center,
-//                    modifier = Modifier
-//                        .fillMaxSize(0.8f)
-//                        .background(color = Color.Blue, shape = RoundedCornerShape(10.dp))
-//                ) {
-//                    Text(
-//                        text = "Hello world",
-//                        color = Color.White,
-//                        fontSize = 36.sp
-//                    )
-//                }
-//            }
+        }
+    }
+
+    override fun onBackPressed() {
+        val isLoggedIn = prefs.getBoolean("is_logged_in", false)
+        if (isLoggedIn && auth.currentUser != null) {
+            Log.i("AA","00")
+            // Do nothing
+        } else {
+            Log.i("AA","11")
+            super.onBackPressed()
         }
     }
 }
